@@ -2,7 +2,7 @@
 function reducer(state = {isModeGameTraining: true}, action: any){
     console.log(action);
     switch (action.type) {
-        case "game.mode.trainig":
+        case "game.mode.training":
             return {
                 isModeGameTraining: true
             };

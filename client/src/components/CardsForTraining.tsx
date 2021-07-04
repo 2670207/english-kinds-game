@@ -2,6 +2,7 @@ import React, {useCallback, useContext, useEffect, useState} from 'react'
 import { CardForTraining } from './CardForTraining'
 
 type CardTypeInterface = {
+    _id: string,
     audioSrc: string,
     word: string,
     image: string,
@@ -11,8 +12,8 @@ export const CardsForTraining = (props:any) => {
     const [cards, setCards] = useState([])
     
     async function fetchCards (){
-        const responce = await fetch(`/api/categories/words/${props.match.params.id}`);
-        const data = await responce.json();
+        const response = await fetch(`/api/categories/words/${props.match.params.id}`);
+        const data = await response.json();
         setCards( () => data);
     }
     useEffect( () => {  fetchCards() }, [props.match.params.id]);

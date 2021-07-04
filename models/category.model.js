@@ -2,7 +2,8 @@ const {Schema, model, Types} = require('mongoose')
 
 const schema = new Schema({
   name: {type: String, required: true},
-  cards: [{type: Types.ObjectId, ref: 'Card'}]
+  image: {type: String, required: true},
+
 })
 
 module.exports = model('Category', schema)
