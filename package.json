@@ -26,11 +26,12 @@
     "express-validator": "^6.3.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.1",
-    "shortid": "^2.2.15"
-  },
-  "devDependencies": {
+    "shortid": "^2.2.15",
     "concurrently": "^5.0.2",
     "cross-env": "^6.0.3",
     "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+  
   }
 }
