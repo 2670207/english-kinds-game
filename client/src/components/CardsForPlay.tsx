@@ -10,8 +10,11 @@ export const CardsForPlay = (props:any) => {
     let history = useHistory();
 
     async function fetchCards (){
-        const response = await fetch(`/api/categories/words/${props.match.params.id}`);
+       
+        const url = props.match.params.id ? `/api/categories/words/${props.match.params.id}` : `/api/words/statistics?field=perSent&order=desc&game=y`;
+        const response = await fetch(url);
         const data = await response.json();
+
         setStatusGame(false);
         setStars([]);
 
@@ -93,6 +96,7 @@ export const CardsForPlay = (props:any) => {
        return ( 
             <div className={statusGame ? 'game started' : 'game' }> 
                 <div className="game__container">
+                    {!cards.items.length  ? <div className="loader">LOADIND.....</div> : ''}
                     {cards.items.map((card: CardTypeInterface, index) => {
                         return (    
                             <div  className={"game__card " + card.status} key={index} onClick={() => onClickByCardHandler(card)}
@@ -106,7 +110,7 @@ export const CardsForPlay = (props:any) => {
                     })}
                 </div>
                 {statusGame && <a className="game__button-paly" onClick={onClickByRepeatHandler}></a>}
-                {!statusGame && <a className="game__button-start" onClick={startGameHandler}>start game</a>}
+                {(cards.items.length && !statusGame) ? <a className="game__button-start" onClick={startGameHandler}>start game</a> : ''}
             </div>
         )
 

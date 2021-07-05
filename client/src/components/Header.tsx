@@ -32,10 +32,9 @@ export const Header = (props: any) =>{
             if(window.location.pathname.includes(category._id)){
                 category.active = 'active';
             }
-            console.log(window.location.pathname, category.active);
             return category;
         });
-
+        setToggleMenu(false);
         setCategories(categories);
     }
 
@@ -60,22 +59,27 @@ export const Header = (props: any) =>{
     <header className="header">
         <div className="header__navigation">
         <div className={ 'header__navigation-button-toggle ' +  (toggleMenu ? "active " : "") } onClick={toggleMenuHandler}></div> 
-
-        <ul className={ 'header__menu ' +  (toggleMenu ? "active " : "") }> 
-            {categories.map((category: CategoryTypeInterface, index) => {
-                return (
-                    <li className={`header__menu-item `}  key={index}> 
-                        <Link to={`/category/words/${category._id}` }  onClick={onByClickMenuHandler}
-                            className={'header__menu-link ' + category.active}>
-                                {category.name}
-                            </Link>
-                    </li>
-                )
-                
-            })}
-        </ul>
+        <div className={ 'header__menu-wrapper ' +  (toggleMenu ? "active " : "") }  onClick={() => setToggleMenu(false)}></div>
+            <ul className={ 'header__menu ' +  (toggleMenu ? "active " : "") }> 
+                {categories.map((category: CategoryTypeInterface, index) => {
+                    return (
+                        <li className={`header__menu-item `}  key={index}> 
+                            <Link to={`/category/words/${category._id}` }  onClick={onByClickMenuHandler}
+                                className={'header__menu-link ' + category.active}>
+                                    {category.name}
+                                </Link>
+                        </li>
+                    )
+                    
+                })}
+            </ul>
+        
+       
 
            
+        </div>
+        <div>
+        <Link to={`/statistics/`} className={'header__button'}>Statistics</Link>
         </div>
         <div className="header__switch">
         <div className="switcher">

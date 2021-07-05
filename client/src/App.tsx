@@ -31,6 +31,7 @@ function App() {
                   <Route exact  path={`/success`} component={withRouter(GameFinishPageSuccess)}/>
                   <Route exact  path={`/errors/:id`} component={withRouter(GameFinishPageErrors)}/>
                   <Route exact  path={`/statistics`} component={withRouter(WordsStatistics)}/>
+                  {!isModeGameTraining && <Route exact  path={`/statistics/difficult-words`} component={withRouter(CardsForPlay)}/>}
                   <Route exact  path={`/`} component={withRouter(Categories)}/>
                 </Switch>
           </Router>    
