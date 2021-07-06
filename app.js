@@ -13,20 +13,20 @@ app.use('/api/', require('./routes/words.routes'));
 if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'build')))
  
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  })
+  app.use(express.static(path.resolve(__dirname, "./client/build")));
+  app.get("*", function (request, response) {
+    response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+  });
 }
 
-const PORT = config.get('port') || 8000
-
+const PORT = process.env.PORT || 5000;
 async function start() {
   try {
-    await mongoose.connect(config.get('mongoUri'), {
+    await mongoose.connect('mongodb+srv://test:test@cluster0.xm7x2.mongodb.net/app?retryWrites=true&w=majority', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true
-    })
+    }) 
     app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
   } catch (e) {
     console.log('Server Error', e.message)
