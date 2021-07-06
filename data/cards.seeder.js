@@ -101,52 +101,52 @@ const cards = [
   ],
   [
     {
-      word: 'argue',
-      translation: 'спорить',
-      image: '/img/argue.jpg',
-      audioSrc: '/audio/argue.mp3'
+      word: 'apricot',
+      translation: 'абрикос',
+      image: '/img/apricot.jpg',
+      audioSrc: '/audio/apricot.mp3'
     },
     {
-      word: 'build',
-      translation: 'строить',
-      image: '/img/build.jpg',
-      audioSrc: '/audio/build.mp3'
+      word: 'banana',
+      translation: 'банан',
+      image: '/img/banana.jpg',
+      audioSrc: '/audio/banana.mp3'
     },
     {
-      word: 'carry',
-      translation: 'нести',
-      image: '/img/carry.jpg',
-      audioSrc: '/audio/carry.mp3'
+      word: 'cherry',
+      translation: 'вишня',
+      image: '/img/cherry.jpg',
+      audioSrc: '/audio/cherry.mp3'
     },
     {
-      word: 'catch',
-      translation: 'ловить',
-      image: '/img/catch.jpg',
-      audioSrc: '/audio/catch.mp3'
+      word: 'grapes',
+      translation: 'виноград',
+      image: '/img/grapes.jpg',
+      audioSrc: '/audio/grapes.mp3'
     },
     {
-      word: 'drive',
-      translation: 'водить машину',
-      image: '/img/drive.jpg',
-      audioSrc: '/audio/drive.mp3'
+      word: 'orange',
+      translation: 'апельсин',
+      image: '/img/orange.jpg',
+      audioSrc: '/audio/orange.mp3'
     },
     {
-      word: 'drop',
-      translation: 'падать',
-      image: '/img/drop.jpg',
-      audioSrc: '/audio/drop.mp3'
+      word: 'pineapple',
+      translation: 'ананас',
+      image: '/img/pineapple.jpg',
+      audioSrc: '/audio/pineapple.mp3'
     },
     {
-      word: 'pull',
-      translation: 'тянуть',
-      image: '/img/pull.jpg',
-      audioSrc: '/audio/pull.mp3'
+      word: 'quince',
+      translation: 'айва',
+      image: '/img/quince.jpg',
+      audioSrc: '/audio/quince.mp3'
     },
     {
-      word: 'push',
-      translation: 'толкать',
-      image: '/img/push.jpg',
-      audioSrc: '/audio/push.mp3'
+      word: 'watermelon',
+      translation: 'арбуз',
+      image: '/img/watermelon.jpg',
+      audioSrc: '/audio/watermelon.mp3'
     },
     
     
@@ -353,52 +353,52 @@ const cards = [
   ],
   [
     {
-      word: 'big',
-      translation: 'большой',
-      image: '/img/big.jpg',
-      audioSrc: '/audio/big.mp3'
+      word: 'bluebell',
+      translation: 'колокольчик',
+      image: '/img/bluebell.jpg',
+      audioSrc: '/audio/bluebell.mp3'
     },
     {
-      word: 'small',
-      translation: 'маленький',
-      image: '/img/small.jpg',
-      audioSrc: '/audio/small.mp3'
+      word: 'crocus',
+      translation: 'крокус',
+      image: '/img/crocus.jpg',
+      audioSrc: '/audio/crocus.mp3'
     },
     {
-      word: 'fast',
-      translation: 'быстрый',
-      image: '/img/fast.jpg',
-      audioSrc: '/audio/fast.mp3'
+      word: 'dahlia',
+      translation: 'георгина',
+      image: '/img/dahlia.jpg',
+      audioSrc: '/audio/dahlia.mp3'
     },
     {
-      word: 'slow',
-      translation: 'медленный',
-      image: '/img/slow.jpg',
-      audioSrc: '/audio/slow.mp3'
+      word: 'hyacinth',
+      translation: 'гиацинт',
+      image: '/img/hyacinth.jpg',
+      audioSrc: '/audio/hyacinth.mp3'
     },
     {
-      word: 'friendly',
-      translation: 'дружелюбный',
-      image: '/img/friendly.jpg',
-      audioSrc: '/audio/friendly.mp3'
+      word: 'iris',
+      translation: 'ирис',
+      image: '/img/iris.jpg',
+      audioSrc: '/audio/iris.mp3'
     },
     {
-      word: 'unfriendly',
-      translation: 'недружелюбный',
-      image: '/img/unfriendly.jpg',
-      audioSrc: '/audio/unfriendly.mp3'
+      word: 'jasmine',
+      translation: 'жасмин',
+      image: '/img/jasmine.jpg',
+      audioSrc: '/audio/jasmine.mp3'
     },
     {
-      word: 'young',
-      translation: 'молодой',
-      image: '/img/young.jpg',
-      audioSrc: '/audio/young.mp3'
+      word: 'lily',
+      translation: 'Лиля',
+      image: '/img/lily.jpg',
+      audioSrc: '/audio/lily.mp3'
     },
     {
-      word: 'old',
-      translation: 'старый',
-      image: '/img/old.jpg',
-      audioSrc: '/audio/old.mp3'
+      word: 'lotus',
+      translation: 'лотос',
+      image: '/img/lotus.jpg',
+      audioSrc: '/audio/lotus.mp3'
     }
   ]
 ]

@@ -8,8 +8,8 @@ const categories = [
         image: '/img/open.jpg'
     },
     {
-        name: 'Action (set C)',
-        image: '/img/argue.jpg'
+        name: 'fruits',
+        image: '/img/apricot.jpg'
     },
     {
         name: 'Animal (set A)',
@@ -28,8 +28,8 @@ const categories = [
         image: '/img/sad.jpg'
     },
     {
-        name: 'Adjective',
-        image: '/img/big.jpg'
+        name: 'Flowers',
+        image: '/img/bluebell.jpg'
     },
 ]
 

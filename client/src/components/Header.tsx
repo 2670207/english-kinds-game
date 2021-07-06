@@ -26,17 +26,6 @@ export const Header = (props: any) =>{
         isModeGameTraining === true ?  dispatch({type: 'game.mode.play'}) : dispatch({type: 'game.mode.training'})
     }, [dispatch, isModeGameTraining])
 
-    const onByClickMenuHandler = () => {
-        categories.map((category: CategoryTypeInterface) => {
-            category.active = ''
-            if(window.location.pathname.includes(category._id)){
-                category.active = 'active';
-            }
-            return category;
-        });
-        setToggleMenu(false);
-        setCategories(categories);
-    }
 
     async function fetchCategories (){
         const response = await fetch("/api/categories/");
@@ -50,8 +39,8 @@ export const Header = (props: any) =>{
         })
         setCategories( () => data);
     }
-
-    useEffect( () => {fetchCategories()}, []);
+ 
+    useEffect( () => {fetchCategories()}, [toggleMenu]);
     
     
     
@@ -64,7 +53,7 @@ export const Header = (props: any) =>{
                 {categories.map((category: CategoryTypeInterface, index) => {
                     return (
                         <li className={`header__menu-item `}  key={index}> 
-                            <Link to={`/category/words/${category._id}` }  onClick={onByClickMenuHandler}
+                            <Link to={`/category/words/${category._id}` }  onClick={() => setToggleMenu(false)}
                                 className={'header__menu-link ' + category.active}>
                                     {category.name}
                                 </Link>
